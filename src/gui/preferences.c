@@ -518,7 +518,11 @@ static void init_tab_general(GtkWidget *dialog, GtkWidget *stack, dt_gui_themetw
   else
   {
     //load default text
-    gtk_text_buffer_set_text(buffer, _("/* Enter CSS theme tweaks here */\n\n"), -1);
+    gtk_text_buffer_set_text(buffer, _("/* Enter CSS theme tweaks here */\n\n"
+                                       "// workaround for missing cursor on Windows 10, uncomment below to enable\n"
+                                       "// {\n"
+                                       "//   font-family: sans;\n"
+                                       "// }\n\n"), -1);
   }
 
 }
